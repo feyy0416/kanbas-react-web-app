@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Home</title>
+</head>
+<body>
+<!-- <div id="root"></div> -->
+
+<table width="100%">
+    <tbody>
+        <tr>
+            <td valign="baseline">
+                <ul>
+                    <li><a href="../../account/account_navigation.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../../courses/courses_navigation.html">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+
+            <td valign="baseline">
+                <ul>
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="index.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="../grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../settings/course_details.html">Settings</a></li>
+                </ul>
+            </td>
+
+                <td valign="baseline">
+                    <form id="assignment-index-search-text-field">
+                        <input type="text" placeholder="Search for Assignments" id="text-fields-search-for-assignments">
+                        <button type="button" id="btn-assignments-page-group">Group</button>
+                        <button type="button" id="btn-assignments-page-assignment">Assignment</button>
+                        <select id="assignment">
+                            <option value="edit-assignment-dates">Edit Assignment Dates</option>
+                            <option value="assignment-groups-weight">Assignment Groups Weight</option>
+                            <option value="grade-scope-1.3">Gradescope 1.3</option>
+                            <option value="commons-favorites">Commons Favorites</option>
+                        </select>
+                    </form>
+                    <hr>
+
+                    <h4>ASSIGNMENTS 40% of Total
+                        <select id="edit-assignment">
+                            <option value="edit-assignment">Edit</option>
+                            <option value="speed-grader-assignment">Speed Grader</option>
+                            <option value="duplicate-assignment">Duplicate</option>
+                            <option value="delete-assignment">Delete</option>
+                            <option value="move-to-assignment">Move to...</option>
+                            <option value="send-to-assignment">Send to...</option>
+                            <option value="copy-to-assignment">Copy to...</option>
+                            <option value="share-assignment">Share to Commons</option>
+                        </select>
+                    </h4>
+                    <ul>
+                        <li><a href="edit.html">A1 - ENV + HTML</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="edit.html">A2 - CSS + BOOTSTRAP</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="edit.html">A3 - JS + REACT</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="edit.html">A4 - STATE + REDUX</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="edit.html">A5 - NODE + SESSION</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="edit.html">A6 - MONGO + MONGOOSE</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                    </ul>
+
+                    <h4>QUIZZES 10% of Total
+                        <select id="edit-quizzes">
+                            <option value="edit-quizzes">Edit</option>
+                            <option value="speed-grader-quizzes">Speed Grader</option>
+                            <option value="duplicate-quizzes">Duplicate</option>
+                            <option value="delete-quizzes">Delete</option>
+                            <option value="move-to-quizzes">Move to...</option>
+                            <option value="send-to-quizzes">Send to...</option>
+                            <option value="copy-to-quizzes">Copy to...</option>
+                            <option value="share-quizzes">Share to Commons</option>
+                        </select>
+                    </h4>
+                    <ul>
+                        <li><a href="#">Q1 - HTML</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="#">Q2 - CSS</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="#">Q3 - JS,ES6</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="#">Q4 - NODE</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="#">Q5 - MONGO</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                    </ul>
+
+                    <h4>EXAMS 20% of Total
+                        <select id="edit-exams">
+                            <option value="edit-exams">Edit</option>
+                            <option value="speed-grader-exams">Speed Grader</option>
+                            <option value="duplicate-exams">Duplicate</option>
+                            <option value="delete-exams">Delete</option>
+                            <option value="move-to-exams">Move to...</option>
+                            <option value="send-to-exams">Send to...</option>
+                            <option value="copy-to-exams">Copy to...</option>
+                            <option value="share-exams">Share to Commons</option>
+                        </select>
+                    </h4>
+                    <ul>
+                        <li><a href="#">Midterm</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                        <li><a href="#">Final</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                    </ul>
+
+                    <h4>PROJECTS 30% of Total
+                        <select id="edit-projects">
+                            <option value="edit-projects">Edit</option>
+                            <option value="speed-grader-projects">Speed Grader</option>
+                            <option value="duplicate-projects">Duplicate</option>
+                            <option value="delete-projects">Delete</option>
+                            <option value="move-to-projects">Move to...</option>
+                            <option value="send-to-projects">Send to...</option>
+                            <option value="copy-to-projects">Copy to...</option>
+                            <option value="share-projects">Share to Commons</option>
+                        </select>
+                    </h4>
+                    <ul>
+                        <li><a href="#">Porject</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
+                    </ul>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>   
+</body>
+</html>
