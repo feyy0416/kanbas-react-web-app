@@ -44,3 +44,16 @@
 .mg-top-20{
     margin-top: 20px;
 }
+
+.course-card-bg{
+    height: 170px;
+}
+
+.course-card {
+    width: 255px;
+    margin: 30px;
+}
+
+a underline {
+    color: pink  !important;
+}
