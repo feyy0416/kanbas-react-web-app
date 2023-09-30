@@ -77,26 +77,34 @@ select {
     display: block;
 }
 
-@media only screen and (max-width: 1200px) {
-    .hide-1200 {
+@media only screen and (max-width: 1000px) {
+    .hide-1000 {
         display: none;
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .hide-800 {
+@media only screen and (max-width: 550px) {
+    .hide-550 {
         display: none;
+    }
+
+    .dynamic-resize {
+        font-size: 12px !important;
+    }
+
+    .dynamic-resize .btn {
+        font-size: 12px !important;
     }
 }
 
-@media only screen and (min-width: 800px) {
-    .show-800 {
+@media only screen and (min-width: 550px) {
+    .show-550 {
         display: none;
     }
 }
 
 .top-nav-bar {
     background-color: black;
-    height: 60px;
+    height: 55px;
 
 }
