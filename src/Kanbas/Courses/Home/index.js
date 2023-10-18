@@ -55,7 +55,7 @@ function Home() {
 
                 <div className="mt-2">
                     <FaCalendarAlt className="mb-1 me-2 text-danger" />
-                    <span class="text-danger">Lecture</span><small
+                    <span className="text-danger">Lecture</span><small
                         className="text-secondary block ms-4 d-block">CS4550.12631.20410<br />
                         Sep 7 at 11.45am</small>
                 </div>

@@ -19,7 +19,7 @@ function Courses() {
             <div className="hide-550">
                 <div className="fs-5 float-start">
                     <nav style={{ "--bs-breadcrumb-divider": "'>'" }} aria-label="breadcrumb">
-                        <ol class="breadcrumb h5 mt-3 ms-3">
+                        <ol className="breadcrumb h5 mt-3 ms-3">
                             <FaBars className="text-danger me-2 m-auto" />
                             <li className="breadcrumb-item text-danger">{course.number}</li>
                             <li className="breadcrumb-item active" aria-current="page">{decodeURI(pathname.split("/")[4])}</li>

@@ -90,7 +90,7 @@ function Assignments() {
               </p>
             </div>
 
-            <div class="float-end mt-3">
+            <div className="float-end mt-3">
               <FaCheckCircle className="text-success me-3" />
               <FaEllipsisV className="text-black" />
             </div>
