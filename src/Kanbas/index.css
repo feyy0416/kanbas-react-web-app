@@ -75,3 +75,22 @@ body {
         display: none;
     }
 }
+
+.responsive-table-container {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+}
+
+
+@media (max-width: 600px) {
+
+}
