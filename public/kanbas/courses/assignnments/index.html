@@ -1,144 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <title>Home</title>
+    <meta charset="UTF-8">
+    <title>Kanbas</title>
+
+    <link href="../../index.css" rel="stylesheet" />
+    <link href="../../../vendors/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../vendors/fontawesome-5.15.4/css/all.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-<!-- <div id="root"></div> -->
+    <!-- <div id="root"></div> -->
+    <table class="table-content">
+        <colgroup>
+            <col span="1" style="width: 80px;">
+        </colgroup>
+        <tbody>
 
-<table width="100%">
-    <tbody>
-        <tr>
-            <td valign="baseline">
-                <ul>
-                    <li><a href="../../account/account_navigation.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../../courses/courses_navigation.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
+            <tr style="height: auto;">
+                <td class="bg-black">
+                    <img src="../../../img/NU.png"
+                        style="width: 70px; height: 70px; display: block; margin-left: auto; margin-right: auto; margin-top: 0;">
+                </td>
+                <td colspan="3">
 
-            <td valign="baseline">
-                <ul>
-                    <li><a href="../home.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="index.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="../grades.html">Grades</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="../settings/course_details.html">Settings</a></li>
-                </ul>
-            </td>
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb h5 mt-3 ms-3">
+                            <i class="fas fa-bars ms-2 text-danger me-3 mt-1"></i>
+                            <li class="breadcrumb-item text-danger">CS5610.11550.202410</li>
+                            <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                        </ol>
+                    </nav>
+                    <hr />
+                </td>
+            </tr>
 
-                <td valign="baseline">
+
+            <tr>
+                <td class="sidebar-nav align-top p-0">
+
+                    <ul class="list-group list-group-flush text-center" style="font-size: 12px;">
+                        <li><a href="../../account/profile/index.html" class="list-group-item text-white bg-black">
+                                <i class="far fa-user fa-2x" style="color: grey;"></i>Account</a>
+                        </li>
+                        <li><a href="../../dashboard/index.html" class="list-group-item text-white bg-black"><i
+                                    class="fas fa-tachometer-alt fa-2x" style="color: #ff0000;"></i>Dashboard</a></li>
+                        <li>
+                            <a href="../home.html" class="list-group-item text-danger bg-white border border-white"><i
+                                    class="fas fa-book fa-2x" style="color: red;"></i>Courses</a>
+                        </li>
+                        <li>
+                            <a href="#" class="list-group-item text-white bg-black"><i class="fas fa-calendar-alt fa-2x"
+                                    style="color: red;"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="#" class="list-group-item text-white bg-black"><i class="fas fa-inbox fa-2x"
+                                    style="color: #ff0000;"></i><br />Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#" class="list-group-item text-white bg-black"><i class="fas fa-history fa-2x"
+                                    style="color: #ff0000;"></i>History</a>
+                        </li>
+                        <li>
+                            <a href="#" class="list-group-item text-white bg-black"><i class="fas fa-tv fa-2x"
+                                    style="color: #ff0000;"></i>Studio</a>
+                        </li>
+                        <li>
+                            <a href="#" class="list-group-item text-white bg-black"><i
+                                    class="far fa-arrow-alt-circle-right fa-2x" style="color: #ff0000;"></i>Commons</a>
+                        </li>
+                        <li>
+                            <a href="#" class="list-group-item text-white bg-black"><i
+                                    class="far fa-question-circle fa-2x" style="color: #ff0000;"></i><br />Help</a>
+                        </li>
+                    </ul>
+                </td>
+
+                <td valign="top" style="width: 190px;">
+
+                    <p class="text-truncate ft-small ms-3 text-secondary" style="width: 150px;">
+                        202410_2 Fall 2023 Semester Full Term Grad
+                    </p>
+
+                    <ul class="list-group sec-col ms-3">
+                        <li><a href="../home.html" class="sec-col-item list-group-item text-danger ps-2">Home</a>
+                        </li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Modules</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Piazza</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Zoom Meetings</a></li>
+                        <li><a href="../assignnments/index.html"
+                                class="sec-col-item list-group-item text-black border-start border-2 border-dark ps-2">Assignments</a>
+                        </li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Quizzes</a></li>
+                        <li><a href="../grades.html" class="sec-col-item list-group-item text-danger ps-2">Grades</a>
+                        </li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">People</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Panopto Video</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Discussions</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Announcements</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Pages</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Files</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Rubrics</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Outcomes</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Collaborations</a></li>
+                        <li><a href="#" class="sec-col-item list-group-item text-danger ps-2">Syllabus</a></li>
+                        <li><a href="../settings/course_details.html"
+                                class="sec-col-item list-group-item text-danger ps-2">Settings</a></li>
+                    </ul>
+                </td>
+
+
+                <td valign="top" class="w-100">
                     <form id="assignment-index-search-text-field">
-                        <input type="text" placeholder="Search for Assignments" id="text-fields-search-for-assignments">
-                        <button type="button" id="btn-assignments-page-group">Group</button>
-                        <button type="button" id="btn-assignments-page-assignment">Assignment</button>
-                        <select id="assignment">
+                        <input type="text" placeholder="Search for Assignments" id="text-fields-search-for-assignments"
+                            class="form-control w-25" style="display: inline;">
+
+                        <div class="dropdown float-end ms-1 me-3">
+                            <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-ellipsis-v" style="color: black;"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Edit Assignment Dates</a></li>
+                                <li><a class="dropdown-item" href="#">Assignment Groups Weight</a></li>
+                                <li><a class="dropdown-item" href="#">Gradescope 1.3</a></li>
+                                <li><a class="dropdown-item" href="#">Commons Favorites</a></li>
+                            </ul>
+                        </div>
+
+                        <button type="button" id="btn-assignments-page-assignment text-white"
+                            class="btn btn-danger float-end ms-1">
+                            <i class="fas fa-plus"></i>
+                            Assignment
+                        </button>
+                        <button type="button" id="btn-assignments-page-group text-secondary"
+                            class="btn btn-outline-secondary float-end">
+                            <i class="fas fa-plus"></i>
+                            Group
+                        </button>
+
+
+                        <!-- <button type="button" id="btn-assignment-index-three-dot"
+                            class="btn btn-outline-secondary float-end ms-1 me-3">
+                            <i class="fa fa-ellipsis-v" style="color: black;"></i>
+                        </button> -->
+
+                        <!-- <select id="assignment">
                             <option value="edit-assignment-dates">Edit Assignment Dates</option>
                             <option value="assignment-groups-weight">Assignment Groups Weight</option>
                             <option value="grade-scope-1.3">Gradescope 1.3</option>
                             <option value="commons-favorites">Commons Favorites</option>
-                        </select>
+                        </select> -->
+
                     </form>
                     <hr>
 
-                    <h4>ASSIGNMENTS 40% of Total
-                        <select id="edit-assignment">
-                            <option value="edit-assignment">Edit</option>
-                            <option value="speed-grader-assignment">Speed Grader</option>
-                            <option value="duplicate-assignment">Duplicate</option>
-                            <option value="delete-assignment">Delete</option>
-                            <option value="move-to-assignment">Move to...</option>
-                            <option value="send-to-assignment">Send to...</option>
-                            <option value="copy-to-assignment">Copy to...</option>
-                            <option value="share-assignment">Share to Commons</option>
-                        </select>
-                    </h4>
-                    <ul>
-                        <li><a href="edit.html">A1 - ENV + HTML</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="edit.html">A2 - CSS + BOOTSTRAP</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="edit.html">A3 - JS + REACT</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="edit.html">A4 - STATE + REDUX</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="edit.html">A5 - NODE + SESSION</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="edit.html">A6 - MONGO + MONGOOSE</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                    </ul>
+                    <div class="list-group me-3" style="min-width: 600px;">
 
-                    <h4>QUIZZES 10% of Total
-                        <select id="edit-quizzes">
-                            <option value="edit-quizzes">Edit</option>
-                            <option value="speed-grader-quizzes">Speed Grader</option>
-                            <option value="duplicate-quizzes">Duplicate</option>
-                            <option value="delete-quizzes">Delete</option>
-                            <option value="move-to-quizzes">Move to...</option>
-                            <option value="send-to-quizzes">Send to...</option>
-                            <option value="copy-to-quizzes">Copy to...</option>
-                            <option value="share-quizzes">Share to Commons</option>
-                        </select>
-                    </h4>
-                    <ul>
-                        <li><a href="#">Q1 - HTML</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="#">Q2 - CSS</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="#">Q3 - JS,ES6</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="#">Q4 - NODE</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="#">Q5 - MONGO</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                    </ul>
+                        <div class="list-group-item list-group-item-secondary"><i class="fas fa-grip-vertical me-3"></i>Assignments
+                            <div class="float-end">
+                                <span class="border border-dark rounded-pill p-1 me-2 ft-small text-center">40% of Total</span>
+                                <i class="fas fa-plus text-dark me-2"></i>
+                                <!-- <i class="fa fa-ellipsis-v text-dark"></i> -->
 
-                    <h4>EXAMS 20% of Total
-                        <select id="edit-exams">
-                            <option value="edit-exams">Edit</option>
-                            <option value="speed-grader-exams">Speed Grader</option>
-                            <option value="duplicate-exams">Duplicate</option>
-                            <option value="delete-exams">Delete</option>
-                            <option value="move-to-exams">Move to...</option>
-                            <option value="send-to-exams">Send to...</option>
-                            <option value="copy-to-exams">Copy to...</option>
-                            <option value="share-exams">Share to Commons</option>
-                        </select>
-                    </h4>
-                    <ul>
-                        <li><a href="#">Midterm</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                        <li><a href="#">Final</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                    </ul>
+                                <div class="dropdown inline">
+                                    <button class="btn btn-outline-secondary border border-0 p-0" type="button" id="dropdownMenuButton2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-ellipsis-v" style="color: black;"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Speed Grader</a></li>
+                                        <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                        <li><a class="dropdown-item" href="#">Move to...</a></li>
+                                        <li><a class="dropdown-item" href="#">Send to...</a></li>
+                                        <li><a class="dropdown-item" href="#">Copy to...</a></li>
+                                        <li><a class="dropdown-item" href="#">Share to Commons</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                    <h4>PROJECTS 30% of Total
-                        <select id="edit-projects">
-                            <option value="edit-projects">Edit</option>
-                            <option value="speed-grader-projects">Speed Grader</option>
-                            <option value="duplicate-projects">Duplicate</option>
-                            <option value="delete-projects">Delete</option>
-                            <option value="move-to-projects">Move to...</option>
-                            <option value="send-to-projects">Send to...</option>
-                            <option value="copy-to-projects">Copy to...</option>
-                            <option value="share-projects">Share to Commons</option>
-                        </select>
-                    </h4>
-                    <ul>
-                        <li><a href="#">Porject</a></br><a href="#">Multiple Modules</a> | Not availabe yet</li>
-                    </ul>
+                        <a class="list-group-item p-2 green-left-border" href="edit.html">
+                            <i class="fas fa-grip-vertical float-start mt-3 ms-2 text-black"></i>
+                            <i class="far fa-edit text-success float-start m-3"></i>
+                            <div class="float-start">
+                                <p class="fw-bold m-0">A1 - SETUP</p>
+                                <p class="ft-small text-secondary m-0">Week 0 - SETUP - Week starting on Monday September
+                                    5th (9/5/2022) Module |</p>
+                                <p class="ft-small text-secondary m-0"><span class="fw-bold">Due </span>Sep 18,2022 at
+                                    11:59 | 100 pts</p>
+                            </div>
+                            <div class="float-end mt-3">
+                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v ms-2 text-black"></i>
+                            </div>
+
+                        </a>
+
+                        <a class="list-group-item p-2 green-left-border" href="edit.html">
+                            <i class="fas fa-grip-vertical float-start mt-3 ms-2 text-black"></i>
+                            <i class="far fa-edit text-success float-start m-3"></i>
+                            <div class="float-start">
+                                <p class="fw-bold m-0">A2 - HTML</p>
+                                <p class="ft-small text-secondary m-0">Week 1 - HTML - Week starting on Monday September
+                                    12th (9/12/2022) Module |</p>
+                                <p class="ft-small text-secondary m-0"><span class="fw-bold">Due </span>Sep 25,2022 at
+                                    11:59 | 100 pts</p>
+                            </div>
+                            <div class="float-end mt-3">
+                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v ms-2 text-black"></i>
+                            </div>
+                        </a>
+
+                        <a class="list-group-item p-2 green-left-border" href="edit.html">
+                            <i class="fas fa-grip-vertical float-start mt-3 ms-2 text-black"></i>
+                            <i class="far fa-edit text-success float-start m-3"></i>
+                            <div class="float-start">
+                                <p class="fw-bold m-0">A3 - CSS</p>
+                                <p class="ft-small text-secondary m-0">Week 2 - CSS - Week starting on Monday September
+                                    19th (9/19/2022) Module |</p>
+                                <p class="ft-small text-secondary m-0"><span class="fw-bold">Due </span>Oct 2,2022 at
+                                    11:59 | 100 pts</p>
+                            </div>
+                            <div class="float-end mt-3">
+                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v ms-2 text-black"></i>
+                            </div>
+                        </a>
+
+                        <a class="list-group-item p-2 green-left-border" href="edit.html">
+                            <i class="fas fa-grip-vertical float-start mt-3 ms-2 text-black"></i>
+                            <i class="far fa-edit text-success float-start m-3"></i>
+                            <div class="float-start">
+                                <p class="fw-bold m-0">A4 - Bootstrap</p>
+                                <p class="ft-small text-secondary m-0">Week 3 - Bootstrap - Week starting on Monday September
+                                    26th (9/26/2022) Module |</p>
+                                <p class="ft-small text-secondary m-0"><span class="fw-bold">Due </span>Oct 10,2022 at
+                                    11:59 | 100 pts</p>
+                            </div>
+                            <div class="float-end mt-3">
+                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v ms-2 text-black"></i>
+                            </div>
+                        </a>
+
+                        <a class="list-group-item p-2 green-left-border" href="edit.html">
+                            <i class="fas fa-grip-vertical float-start mt-3 ms-2 text-black"></i>
+                            <i class="far fa-edit text-success float-start m-3"></i>
+                            <div class="float-start">
+                                <p class="fw-bold m-0">A5 - Javascript</p>
+                                <p class="ft-small text-secondary m-0">Week 4 - Javascript - Week starting on Monday October
+                                    3rd (10/3/2022) Module |</p>
+                                <p class="ft-small text-secondary m-0"><span class="fw-bold">Due </span>Oct 16,2022 at
+                                    11:59 | 100 pts</p>
+                            </div>
+                            <div class="float-end mt-3">
+                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v ms-2 text-black"></i>
+                            </div>
+                        </a>
+
+                        <a class="list-group-item p-2 green-left-border" href="edit.html">
+                            <i class="fas fa-grip-vertical float-start mt-3 ms-2 text-black"></i>
+                            <i class="far fa-edit text-success float-start m-3"></i>
+                            <div class="float-start">
+                                <p class="fw-bold m-0">A6 - React</p>
+                                <p class="ft-small text-secondary m-0">Week 6 - React & Routing - Week starting on Monday October
+                                    10th (10/10/2022) Module |</p>
+                                <p class="ft-small text-secondary m-0"><span class="fw-bold">Due </span>Oct 23,2022 at
+                                    11:59 | 100 pts</p>
+                            </div>
+                            <div class="float-end mt-3">
+                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v ms-2 text-black"></i>
+                            </div>
+                        </a>
+
+                    </div>
 
                 </td>
 
             </tr>
         </tbody>
-    </table>   
+    </table>
 </body>
+
 </html>

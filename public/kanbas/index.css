@@ -1,0 +1,143 @@
+.sidebar-nav {
+    background-color: black;
+
+}
+
+.table-content tr {
+    height: 100vh;
+    margin-top: 0;
+}
+
+.sec-col {
+    list-style-type: none !important;
+}
+
+.sec-col-item {
+    font-weight: 500;
+    font-size: 16px;
+    border: none !important;
+
+}
+
+.fg-color-red {
+    color: red;
+}
+
+.fg-weight-500 {
+    font-weight: 500;
+}
+
+.wd-float-done {
+    clear: both;
+}
+
+.wd-float-right {
+    float: right;
+}
+
+.row-content {
+    text-align: center;
+}
+
+.mg-top-20 {
+    margin-top: 20px;
+}
+
+.course-card-bg {
+    height: 170px;
+}
+
+.course-card {
+    width: 255px;
+    margin: 30px;
+}
+
+
+.list-group-root>.list-group-item>.fa-grip-vertical{
+    margin-right: 20px;
+}
+
+.list-group-root>.list-group>.list-group-item>.fa-grip-vertical{
+    margin-right: 20px;
+}
+
+.list-group-root>.list-group>.list-group>.list-group-item>.fa-grip-vertical{
+    margin-right: 70px;
+}
+
+/* .list-group-root>.list-group>.list-group>.list-group-item {
+    padding-left: 70px;
+} */
+
+select {
+    font-family: 'FontAwesome', 'arial';
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hide-1000 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hide-550 {
+        display: none;
+    }
+
+    .dynamic-resize {
+        font-size: 12px !important;
+    }
+
+    .dynamic-resize .btn {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .show-550 {
+        display: none;
+    }
+}
+
+.top-nav-bar {
+    background-color: black;
+    height: 55px;
+}
+
+.ft-small {
+    font-size: 12px;
+}
+
+.green-left-border{
+    border-left: 5px solid !important;
+    border-left-color: green !important;
+}
+
+.active-tab {
+    text-align: center;
+    border: 2px solid !important;
+    border-color: lightgray !important;
+    border-bottom: none !important;
+}
+
+.non-active-tab {
+    text-align: center;
+    border-bottom: 2px solid !important;
+    border-color: lightgray !important;
+}
+
+.table-responsive{
+    overflow-x: auto;
+} 

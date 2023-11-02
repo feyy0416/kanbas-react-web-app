@@ -1,0 +1,92 @@
+body {
+    min-height: 100%;
+}
+
+.nav-bar-item{
+    text-align: center;
+    font-size: 13px;
+    width: 90px;
+}
+
+.nav-bar{
+    min-height: 100vh;
+    width: 90px;
+    background-color: black;
+}
+
+.nav-bar>.list-group>.selected{
+    background-color: white !important;
+    color: red !important;
+}
+
+.course-card-bg {
+    height: 170px;
+}
+
+.course-card {
+    width: 255px;
+    margin: 30px;
+}
+
+.sec-col-item {
+    font-weight: 500;
+    font-size: 16px;
+    border: transparent !important;
+}
+
+.ft-small {
+    font-size: 12px;
+}
+
+.wd-float-done {
+    clear: both;
+}
+
+.inline {
+    display: inline;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hide-1000 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hide-550 {
+        display: none;
+    }
+
+    .dynamic-resize {
+        font-size: 12px !important;
+    }
+
+    .dynamic-resize .btn {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .show-550 {
+        display: none;
+    }
+}
+
+.responsive-table-container {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+}
+
