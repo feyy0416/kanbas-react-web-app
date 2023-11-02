@@ -35,7 +35,7 @@ function Grades() {
             </div>
 
 
-            <div class="row mb-3 wd-float-done">
+            <div className="row mb-3 wd-float-done">
 
                 <div className="col">
                     <p className="fw-bold mb-1 ms-2">Students Names</p>
@@ -67,15 +67,15 @@ function Grades() {
 
             </div>
 
-            <button type="button" class="btn btn-outline-secondary ms-2"><FaFilter className="mb-1 me-2" />Apply Filters</button>
+            <button type="button" className="btn btn-outline-secondary ms-2"><FaFilter className="mb-1 me-2" />Apply Filters</button>
 
             <div className="responsive-table-container table-responsive mt-3">
 
                 <table className="table table-striped table-bordered" style={{tableLayout: "auto"}}>
                     <thead>
-                        <th scope="col" class="border border-1 pb-3 ps-2" style={{width: "200px"}}>Student Name</th>
+                        <th scope="col" className="border border-1 pb-3 ps-2" style={{width: "200px"}}>Student Name</th>
                         {assignments.map((assignment) => 
-                        (<th scope="col" class="border border-1 text-center">{assignment.title}<br/>
+                        (<th scope="col" className="border border-1 text-center">{assignment.title}<br/>
                         Out of {assignment.points}</th>))}
                     </thead>
 
@@ -85,11 +85,11 @@ function Grades() {
                             const user = db.users.find((user) => user._id === enrollment.user);
                             return (
                                 <tr>
-                                    <td class="text-danger">{user.firstName} {user.lastName}</td>
+                                    <td className="text-danger">{user.firstName} {user.lastName}</td>
                                     {assignments.map((assignment) => {
                                         const grade = db.grades.find(
                                             (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
-                                        return (<td class="text-center">{grade?.grade || ""}</td>);
+                                        return (<td className="text-center">{grade?.grade || ""}</td>);
                                     })}
                                 </tr>);
                         })}

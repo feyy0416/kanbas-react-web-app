@@ -1,15 +1,28 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import { FaPlus } from "react-icons/fa"
 import { FaEllipsisV } from "react-icons/fa"
 import { BsGripVertical } from "react-icons/bs"
 import { FaEdit } from "react-icons/fa"
 import { FaCheckCircle } from "react-icons/fa"
 
+import { useSelector, useDispatch } from "react-redux";
+import {
+  deleteAssignment,
+  setAssignment,
+} from "./assignmentsReducer";
+
 function Assignments() {
+
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
+  const newAssignment = {
+    title: "New Assignment", description: "New Description",
+    start: "2023-09-10", end: "2023-12-15", points: "100", due: "2023-12-15"
+  }
+
   const { courseId } = useParams();
-  const assignments = db.assignments;
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
 
@@ -32,11 +45,14 @@ function Assignments() {
           </ul>
         </div>
 
-        <button type="button" id="btn-assignments-page-assignment text-white"
-          className="btn btn-danger float-end ms-1">
+        <Link
+          to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`}
+          className="btn btn-danger float-end ms-1"
+          id="btn-assignments-page-assignment text-white"
+        >
           <FaPlus className="mb-1 me-2" />
           Assignment
-        </button>
+        </Link>
         <button type="button" id="btn-assignments-page-group text-secondary"
           className="btn btn-outline-secondary float-end">
           <FaPlus className="mb-1 me-2" />
@@ -73,29 +89,35 @@ function Assignments() {
           </div>
         </div>
         {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item ps-2 pe-2">
-            <BsGripVertical className="mt-4 ms-0 float-start" />
-            <FaEdit className="mt-4 ms-1 me-3 text-success float-start" />
-            <div className="float-start">
-              <p className="fw-bold m-0">{assignment.title}</p>
-              <p className="ft-small text-secondary m-0"><span className="ft-small text-danger m-0">Multiple Modules</span>
-                &nbsp;&nbsp; | &nbsp;&nbsp;
-                <span className="fw-bold"> Not available until </span>
-                {assignment.start} &nbsp;&nbsp; | &nbsp;&nbsp; <br />
-                <span className="fw-bold "> Due </span>
-                {assignment.end} &nbsp;&nbsp; | &nbsp;&nbsp; {assignment.points} pts
-              </p>
-            </div>
+          <div className="list-group-item ps-2 pe-2">
+            <Link
+              key={assignment._id}
+              to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+              className="text-black"
+              onClick={() => dispatch(setAssignment({ ...assignment }))}>
+              <BsGripVertical className="mt-4 ms-0 float-start" />
+              <FaEdit className="mt-4 ms-1 me-3 text-success float-start" />
+              <div className="float-start">
+                <p className="fw-bold m-0">{assignment.title}</p>
+                <p className="ft-small text-secondary m-0"><span className="ft-small text-danger m-0">Multiple Modules</span>
+                  &nbsp;&nbsp; | &nbsp;&nbsp;
+                  <span className="fw-bold"> Not available until </span>
+                  {assignment.start} &nbsp;&nbsp; | &nbsp;&nbsp; <br />
+                  <span className="fw-bold "> Due </span>
+                  {assignment.due} &nbsp;&nbsp; | &nbsp;&nbsp; {assignment.points} pts
+                </p>
+              </div>
 
-            <div className="float-end mt-3">
-              <FaCheckCircle className="text-success me-3" />
-              <FaEllipsisV className="text-black" />
-            </div>
-
-          </Link>
+              <div className="float-end mt-3">
+                <FaCheckCircle className="text-success me-3 ms-2" />
+                <FaEllipsisV className="text-black" />
+              </div>
+            </Link>
+            <button className="btn btn-outline-danger border-0 ms-2 mb-1 float-end"
+              onClick={() => dispatch(deleteAssignment(assignment._id))}>
+              Delete
+            </button>
+          </div>
         ))}
       </div>
     </div>

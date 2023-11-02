@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6"
 import { FaGlasses } from "react-icons/fa"
@@ -10,9 +9,9 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
 
-function Courses() {
+function Courses({ courses }) {
     var { courseId } = useParams();
-    const course = db.courses.find((course) => course._id === courseId);
+    const course = courses.find((course) => course._id === courseId);
     const { pathname } = useLocation();
 
     return (
@@ -34,7 +33,7 @@ function Courses() {
                 <hr className="wd-float-done" />
             </div>
             <div className="row me-0" style={{ minWidth: "550px" }}>
-                <div className="col hide-550" style={{ maxWidth: "200px" }}><CourseNavigation /></div>
+                <div className="col hide-550" style={{ maxWidth: "200px" }}><CourseNavigation course={course}/></div>
                 <div className="col float-start">
                     <div>
                         <div
