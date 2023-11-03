@@ -6,7 +6,9 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
 
     function ShowAddUpdateCourseArea() {
         var area = document.getElementById("add-update-form");
+        var btn = document.getElementById("addUpdateBtn");
         area.style.display = 'block';
+        btn.style.display = 'block';
     }
 
     const cardBgColorList = ["bg-success", "bg-danger", "bg-primary", "bg-info", "bg-warning"];
@@ -32,10 +34,12 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
                         onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
                     <input type="text" className="form-control mt-2" placeholder="term" value={course.term}
                         onChange={(e) => setCourse({ ...course, term: e.target.value })} />
-
+                </form>
+                <div className="ms-2" id="addUpdateBtn" style={{ width: "800px", display: "none" }}>
                     <button onClick={addNewCourse} className="btn btn-success mt-2">Add</button>
                     <button onClick={updateCourse} className="btn btn-primary mt-2 ms-2">Update</button>
-                </form>
+                </div>
+
                 <hr />
                 <div className="container p-0">
 
