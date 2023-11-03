@@ -6,7 +6,7 @@
         "start": "2022-09-18",
         "end": "2022-09-26",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-26"
     },
     {
@@ -16,7 +16,7 @@
         "start": "2022-09-26",
         "end": "2022-09-30",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-30"
     },
     {
@@ -26,7 +26,7 @@
         "start": "2022-10-01",
         "end": "2022-10-08",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-10-08"
     },
     {
@@ -36,7 +36,7 @@
         "start": "2022-09-18",
         "end": "2022-09-26",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-26"
     },
     {
@@ -46,7 +46,7 @@
         "start": "2022-09-26",
         "end": "2022-09-30",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-30"
     },
     {
@@ -56,7 +56,7 @@
         "start": "2022-10-01",
         "end": "2022-10-08",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-10-08"
     },
     {
@@ -66,7 +66,7 @@
         "start": "2022-09-18",
         "end": "2022-09-26",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due":"2022-09-26"
     },
     {
@@ -76,7 +76,7 @@
         "start": "2022-09-26",
         "end": "2022-09-30",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-30"
     },
     {
@@ -86,7 +86,7 @@
         "start": "2022-10-01",
         "end": "2022-10-28",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-10-28"
     },
     {
@@ -96,7 +96,7 @@
         "start": "2022-09-18",
         "end": "2022-09-26",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-26"
     },
     {
@@ -106,7 +106,7 @@
         "start": "2022-09-26",
         "end": "2022-09-30",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due":"2022-09-30"
     },
     {
@@ -116,7 +116,7 @@
         "start": "2022-10-01",
         "end": "2022-10-28",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-10-28"
     },
     {
@@ -126,7 +126,7 @@
         "start": "2022-09-18",
         "end": "2022-09-26",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-26"
     },
     {
@@ -136,7 +136,7 @@
         "start": "2022-09-26",
         "end": "2022-09-30",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-30"
     },
     {
@@ -146,7 +146,7 @@
         "start": "2022-10-01",
         "end": "2022-10-28",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-10-28"
     },
     {
@@ -156,7 +156,7 @@
         "start": "2022-09-18",
         "end": "2022-09-26",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-26"
     },
     {
@@ -166,7 +166,7 @@
         "start": "2022-09-26",
         "end": "2022-09-30",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-30"
     },
     {
@@ -176,7 +176,7 @@
         "start": "2022-10-01",
         "end": "2022-10-28",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-10-28"
     },
     {
@@ -186,7 +186,7 @@
         "start": "2022-09-18",
         "end": "2022-09-26",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-26"
     },
     {
@@ -196,7 +196,7 @@
         "start": "2022-09-26",
         "end": "2022-09-30",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-09-30"
     },
     {
@@ -206,7 +206,7 @@
         "start": "2022-10-01",
         "end": "2022-10-28",
         "points": "100",
-        "discription": "This a discription of this course",
+        "description": "This a description of this course",
         "due": "2022-10-28"
     }
     

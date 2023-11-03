@@ -15,7 +15,6 @@ function AssignmentEditor() {
 
     const { courseId } = useParams();
     const { assignmentId } = useParams();
-    console.log(assignmentId);
 
     const assignment = useSelector((state) => state.assignmentsReducer.assignment);
     const dispatch = useDispatch();
@@ -31,7 +30,7 @@ function AssignmentEditor() {
         }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
-
+    console.log(assignment);
     return (
         <div className="me-3" >
 
@@ -61,8 +60,8 @@ function AssignmentEditor() {
                 id="assignments-edit-assignment-name" />
 
             <textarea id="assignments-edit-assignment-description"
-                value={assignment.discription}
-                onChange={(e) => dispatch(setAssignment({ ...assignment, discription: e.target.value }))}
+                value={assignment.description}
+                onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}
                 className="form-control mt-3" />
 
 
