@@ -17,11 +17,6 @@ function Assignments() {
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
-  const newAssignment = {
-    title: "New Assignment", description: "New Description",
-    start: "2023-09-10", end: "2023-12-15", points: "100", due: "2023-12-15"
-  }
-
   const { courseId } = useParams();
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
@@ -49,6 +44,8 @@ function Assignments() {
           to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`}
           className="btn btn-danger float-end ms-1"
           id="btn-assignments-page-assignment text-white"
+          onClick={() => dispatch(setAssignment({...assignment, title: "New title", description: "New Description",
+          start: "2023-09-10", end: "2023-12-15", points: "100", due: "2023-12-15"}))}
         >
           <FaPlus className="mb-1 me-2" />
           Assignment

@@ -3,8 +3,14 @@ import db from "../../Database";
 
 const initialState = {
     assignments: db.assignments,
-    assignment: { title: "New Assignment", description: "New Description",
-    start: "2023-09-10", end: "2023-12-15", points: "100", due:"2023-12-15"},
+    assignment: {
+        title: "New Assignment", 
+        description: "New Description",
+        start: "2023-09-10", 
+        end: "2023-12-15", 
+        points: "100", 
+        due: "2023-12-15"
+    },
 };
 
 const assignmentSlice = createSlice({
@@ -40,4 +46,4 @@ const assignmentSlice = createSlice({
 
 export const { addAssignment, deleteAssignment,
     updateAssignment, setAssignment } = assignmentSlice.actions;
-  export default assignmentSlice.reducer;
+export default assignmentSlice.reducer;
