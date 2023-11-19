@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // import db from "../../Database";
-// import "../../index.css"
 import { FaEllipsisVertical } from "react-icons/fa6"
 import { AiOutlinePlus } from "react-icons/ai"
 import { AiOutlineCheckCircle } from "react-icons/ai"

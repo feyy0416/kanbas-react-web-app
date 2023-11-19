@@ -16,7 +16,6 @@ function Courses() {
     const { pathname } = useLocation();
     const API_BASE = process.env.REACT_APP_API_BASE;
     const URL = `${API_BASE}/api/courses`;
-    console.log(URL);
 
     const [course, setCourse] = useState({
         name: "New Course", number: "New Course Number",
