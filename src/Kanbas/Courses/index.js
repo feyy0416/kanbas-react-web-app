@@ -7,12 +7,33 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
-function Courses({ courses }) {
+function Courses() {
     var { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
     const { pathname } = useLocation();
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const URL = `${API_BASE}/api/courses`;
+    console.log(URL);
+
+    const [course, setCourse] = useState({
+        name: "New Course", number: "New Course Number",
+        startDate: "2023-09-10", endDate: "2023-12-15",
+        term: "New Term"
+    });
+
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
 
     return (
         <div className="w-100">
@@ -33,7 +54,7 @@ function Courses({ courses }) {
                 <hr className="wd-float-done" />
             </div>
             <div className="row me-0" style={{ minWidth: "550px" }}>
-                <div className="col hide-550" style={{ maxWidth: "200px" }}><CourseNavigation course={course}/></div>
+                <div className="col hide-550" style={{ maxWidth: "200px" }}><CourseNavigation course={course} /></div>
                 <div className="col float-start">
                     <div>
                         <div

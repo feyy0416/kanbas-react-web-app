@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa"
 import { FaEllipsisV } from "react-icons/fa"
-
+import * as Client from "../client";
 import { useSelector, useDispatch } from "react-redux";
 import {
     addAssignment,
@@ -15,22 +15,22 @@ function AssignmentEditor() {
 
     const { courseId } = useParams();
     const { assignmentId } = useParams();
-
-    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
     const dispatch = useDispatch();
-
-
     const navigate = useNavigate();
-    const handleSave = () => {
-        if (assignmentId === "NewAssignment"){
-            const newAssignment = {...assignment, course: courseId};
-            dispatch(addAssignment(newAssignment));
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+    const handleSave = async () => {
+        if (assignmentId === "NewAssignment") {
+            Client.createAssignment(courseId, assignment).then((assignment) => {
+                dispatch(addAssignment(assignment));
+            });
         } else {
+            const status = await Client.updateAssignment(assignment);
+            console.log(assignment);
             dispatch(updateAssignment(assignment));
         }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
-    console.log(assignment);
+
     return (
         <div className="me-3" >
 

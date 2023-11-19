@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // import db from "../../Database";
 // import "../../index.css"
@@ -13,7 +13,9 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
 
 
 function ModuleList() {
@@ -24,9 +26,33 @@ function ModuleList() {
   }
 
   const { courseId } = useParams();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((m) => 
+        dispatch(setModules(m))
+    );
+  }, [courseId]);
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
-  const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
 
 
   return (
@@ -39,8 +65,8 @@ function ModuleList() {
           <textarea className="form-control mt-2" value={module.description}
             onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
           />
-          <button className="btn btn-success mt-2" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-          <button className="btn btn-primary mt-2 ms-2" onClick={() => dispatch(updateModule(module))}>Update</button>
+          <button className="btn btn-success mt-2" onClick={handleAddModule}>Add</button>
+          <button className="btn btn-primary mt-2 ms-2" onClick={handleUpdateModule}>Update</button>
         </div>
         <button type="button" id="btn-home-module" className="btn btn-danger" onClick={ShowAddModuleArea}>
           <AiOutlinePlus className="mb-1 me-1" />
@@ -90,7 +116,7 @@ function ModuleList() {
                   Edit
                 </button>
                 <button className="btn btn-outline-danger border-0 ms-2 mb-1"
-                  onClick={() => dispatch(deleteModule(module._id))}>
+                  onClick={() => handleDeleteModule(module._id)}>
                   Delete
                 </button>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaPlus } from "react-icons/fa"
 import { FaEllipsisV } from "react-icons/fa"
@@ -10,16 +10,30 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   deleteAssignment,
   setAssignment,
+  setAssignments,
+  updateAssignment,
 } from "./assignmentsReducer";
+import * as Client from "./client";
 
 function Assignments() {
+  const { courseId } = useParams();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    Client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+      );
+  }, [courseId]);
 
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
-  const dispatch = useDispatch();
-  const { courseId } = useParams();
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
+
+  const handleDeleteAssignment = (assignmentId) => {
+    Client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+
 
   return (
     <div className="dynamic-resize">
@@ -44,8 +58,10 @@ function Assignments() {
           to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`}
           className="btn btn-danger float-end ms-1"
           id="btn-assignments-page-assignment text-white"
-          onClick={() => dispatch(setAssignment({...assignment, title: "New title", description: "New Description",
-          start: "2023-09-10", end: "2023-12-15", points: "100", due: "2023-12-15"}))}
+          onClick={() => dispatch(setAssignment({
+            ...assignment, title: "New title", description: "New Description",
+            start: "2023-09-10", end: "2023-12-15", points: "100", due: "2023-12-15"
+          }))}
         >
           <FaPlus className="mb-1 me-2" />
           Assignment
@@ -85,7 +101,7 @@ function Assignments() {
             </div>
           </div>
         </div>
-        {courseAssignments.map((assignment) => (
+        {assignments.map((assignment) => (
           <div className="list-group-item ps-2 pe-2">
             <Link
               key={assignment._id}
@@ -111,7 +127,7 @@ function Assignments() {
               </div>
             </Link>
             <button className="btn btn-outline-danger border-0 ms-2 mb-1 float-end"
-              onClick={() => dispatch(deleteAssignment(assignment._id))}>
+              onClick={() => handleDeleteAssignment(assignment._id)}>
               Delete
             </button>
           </div>
