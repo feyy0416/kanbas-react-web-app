@@ -29,7 +29,7 @@ function WorkingWithObjects() {
         <div>
             <h3>Working With Objects</h3>
             <h4>Retrieving Objects</h4>
-            <a href={`${API_BASE}/a5/assignment}`}
+            <a href={`${API_BASE}/a5/assignment`}
                 className="btn btn-primary me-2">
                 Get Assignment
             </a>
