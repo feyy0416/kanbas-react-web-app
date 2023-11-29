@@ -16,6 +16,7 @@ import Signup from "./users/signup";
 
 function Kanbas() {
 
+  axios.defaults.withCredentials=true;
   // const [courses, setCourses] = useState(db.courses);
   const { pathname } = useLocation();
 
